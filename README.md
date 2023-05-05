@@ -1,4 +1,4 @@
-# MG-Visualizer
+
 
 # MG-Visualizer 📊
 
