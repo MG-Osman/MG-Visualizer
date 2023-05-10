@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MG-visualizer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">MG-Visualizer</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="chart-type">Select chart type:</label>
+          <select id="chart-type" class="form-control">
+            <option value="pie">Pie</option>
+            <option value="line">Line</option>
+            <option value="bar">Bar</option>
+            <option value="scatter">Scatter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="chart-title">Chart title:</label>
+          <input type="text" id="chart-title" class="form-control" placeholder="Enter chart title">
+        </div>
+        <div id="axis-settings" class="d-none">
+          <div class="form-group">
+            <label for="x-axis-label">X-axis label:</label>
+            <input type="text" id="x-axis-label" class="form-control" placeholder="Enter X-axis label">
+          </div>
+          <div class="form-group">
+            <label for="y-axis-label">Y-axis label:</label>
+            <input type="text" id="y-axis-label" class="form-control" placeholder="Enter Y-axis label">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="data-points">Data points:</label>
+          <div id="data-points"></div>
+          <button id="add-data-point" class="btn btn-primary btn-sm mt-2">Add data point</button>
+        </div>
+        <button id="create-chart" class="btn btn-success">Create Chart</button>
+      </div>
+      <div class="col-md-6">
+        <div class="chart-container">
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
