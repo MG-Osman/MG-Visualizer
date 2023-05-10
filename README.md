@@ -12,16 +12,7 @@ MG-Visualizer is an ongoing project to make a user-friendly **data visualization
 ## 🌟 Features
 
 - 🌐 Interactive web-based interface for data visualization
-- 📈 Supports diverse chart types: bar, line, pie, scatter, and more
+- 📈 Supports diverse chart types: bar, line, pie, scatter.
 - 🔧 Customizable chart options tailored to your needs
-- ⚡ Seamless integration with Flask for rapid web development
-- 💾 Export visualizations as static images or interactive HTML files
 
-## 📋 Requirements
-
-- Python 3.7+
-- Flask 2.0+
-- Matplotlib 3.4+
-- Pandas 1.2+
-- NumPy 1.20+
 
