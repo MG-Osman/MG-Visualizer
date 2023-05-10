@@ -7,7 +7,7 @@ MG-Visualizer is an ongoing project to make a user-friendly **data visualization
 
 <div align="center" style="margin-bottom: 20px;">
   <figure>
-    <video src="[your_video_url_here.mp4](https://github.com/MG-Osman/MG-Visualizer/assets/58115228/11ff36f6-c6d6-41b9-bdbf-ae1b5ba167dc)" alt="Demo" width="640" height="360" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);" controls>
+    <video src="[(https://github.com/MG-Osman/MG-Visualizer/assets/58115228/11ff36f6-c6d6-41b9-bdbf-ae1b5ba167dc)]" alt="Demo" width="640" height="360" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);" controls>
       Your browser does not support the video tag.
     </video>
     <figcaption style="margin-top: 10px; font-weight: bold;">Demo</figcaption>
