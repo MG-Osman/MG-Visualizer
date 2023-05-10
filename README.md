@@ -2,7 +2,7 @@
 
 # MG-Visualizer 📊
 
-MG-Visualizer is an ongoing project to make a user-friendly **data visualization web application** that leverages the capabilities of **Matplotlib** for creating stunning and interactive charts, and **Flask** for seamless integration with web technologies. Allowing for the transformation of raw data into insightful visualizations and explore complex datasets. I Forked some of the code for this project from my [previous repo](https://github.com/MG-Osman/DataVisualizer)
+MG-Visualizer is an ongoing project to make a user-friendly **data visualization web application** that leverages the capabilities of **Matplotlib** for creating stunning and interactive charts, and **Flask** for seamless integration with web technologies. Allowing for the transformation of raw data into insightful visualizations and explore complex datasets.Inspiration for this project was drawn from a previous repo repository found [here](https://github.com/MG-Osman/DataVisualizer).
 
 <p align="center">
   <img src="./screenshot.png" alt="MG-Visualization Screenshot" width="80%">
