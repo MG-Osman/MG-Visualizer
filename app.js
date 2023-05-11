@@ -7,7 +7,8 @@ $(document).ready(function () {
   const dataPointsContainer = $("#data-points");
   const addDataPointButton = $("#add-data-point");
   const createChartButton = $("#create-chart");
-  const chartCanvas =$("#chart");
+  const chartCanvas = $("#chart");
+  const histogramSwitch = $("#histogram-switch");
 
   let chart;
 
@@ -28,11 +29,31 @@ $(document).ready(function () {
     return colors;
   }
 
+  function createBins(data, binCount) {
+    const min = Math.min(...data);
+    const max = Math.max(...data);
+    const binSize = (max - min) / binCount;
+    const bins = new Array(binCount).fill(0);
+
+    data.forEach(value => {
+      const binIndex = Math.min(Math.floor((value - min) / binSize), binCount - 1);
+      bins[binIndex]++;
+    });
+
+    return bins;
+  }
+
   chartTypeSelect.on("change", function () {
     if (this.value === "pie") {
       axisSettings.addClass("d-none");
     } else {
       axisSettings.removeClass("d-none");
+    }
+
+    if (this.value === "bar") {
+      histogramSwitch.removeClass("d-none");
+    } else {
+      histogramSwitch.addClass("d-none");
     }
   });
 
@@ -58,13 +79,27 @@ $(document).ready(function () {
     const xAxisLabel = xAxisLabelInput.val();
     const yAxisLabel = yAxisLabelInput.val();
 
-    const dataPoints = dataPointsContainer.find(".data-point");
-    const labels = dataPoints.map(function () {
+    let labels = dataPointsContainer.find(".data-point").map(function () {
       return $(this).find("input[type='text']").val();
     }).get();
-    const values = dataPoints.map(function () {
+    let values = dataPointsContainer.find(".data-point").map(function () {
       return Number($(this).find("input[type='number']").val());
     }).get();
+
+    if (chartType === "bar" && histogramSwitch.prop("checked")) {
+      const binCount = 10;
+      values = createBins(values, binCount);
+
+      const minValue = Math.min(...values);
+      const maxValue = Math.max(...values);
+      const binSize = (maxValue - minValue) / binCount;
+
+      labels = new Array(binCount).fill(0).map((_, index) => {
+        const start = minValue + index * binSize;
+        const end = start + binSize;
+        return `${start.toFixed(2)} - ${end.toFixed(2)}`;
+      });
+    }
 
     if (chart) {
       chart.destroy();
